@@ -1,0 +1,46 @@
+openapi: 3.0.3
+info:
+  title: Trailgauge
+  version: 0.2.0
+  description: Read a paddock water trough level and alert when it runs low.
+servers:
+  - url: https://api.trailgauge.example
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+  - apiKey: []
+paths:
+  /troughs:
+    get:
+      summary: List every trough and its last reading
+      responses:
+        "200":
+          description: A list of troughs
+  /troughs/{id}:
+    get:
+      summary: One trough with its reading history
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: One trough
+  /readings:
+    post:
+      summary: Record a reading from a sensor
+      responses:
+        "201":
+          description: Reading recorded
+  /alerts:
+    post:
+      summary: Set the low water threshold for a paddock
+      responses:
+        "201":
+          description: Alert created

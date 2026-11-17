@@ -1,0 +1,21 @@
+[project]
+name = "trailgauge"
+version = "0.2.0"
+description = "Read a paddock water trough level over HTTP and get a text when it runs low"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["agriculture", "iot", "monitoring", "sms"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+]
+dependencies = ["httpx>=0.27"]
+
+[project.urls]
+Documentation = "https://docs.trailgauge.example"
+Issues = "https://github.com/argosautomation/pipetrails-fixture/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
