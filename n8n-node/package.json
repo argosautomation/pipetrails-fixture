@@ -1,0 +1,14 @@
+{
+  "name": "n8n-nodes-trailgauge",
+  "version": "0.1.0",
+  "description": "n8n community nodes for Trailgauge",
+  "keywords": ["n8n-community-node-package"],
+  "license": "MIT",
+  "main": "nodes/Trailgauge.node.js",
+  "files": ["nodes", "credentials"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": ["n8n-nodes-trailgauge.TrailgaugeApi"],
+    "nodes": ["n8n-nodes-trailgauge.Trailgauge"]
+  }
+}
